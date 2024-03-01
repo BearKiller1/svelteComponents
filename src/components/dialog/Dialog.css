@@ -1,0 +1,47 @@
+.lucidDialog{
+    width:30%;
+    height:60vh;
+    margin: 10vh 0 0 35%;
+    background-color: rgb(172, 172, 172);
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 101;    
+}
+
+.lucidClose{
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.lucidTitle{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    user-select: none;
+}
+
+.lucidDialog .lucidContent{
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.lucidBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

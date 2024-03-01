@@ -1,0 +1,12 @@
+.calendarHeader{
+    width: 100%;
+    height: 5cqmax;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendarDay{
+    width: 10%;
+    background-color: red;
+}

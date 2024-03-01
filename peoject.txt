@@ -1,0 +1,48 @@
+general plans 
+    (done)
+    it must have some sort of trigger in the parent component 
+    and by importing it u have access to open/close dialog
+
+openIF={openDialog} (done -> bind:openIF={openBoolean} )
+
+contentValue = fetch everythings value,
+    1. add binds to all the inputs and selectors
+    2. it should bind it to the object with the same 
+    name as elements id, so the user who defiend 
+    the input in parent will have access on it
+    buy giving child the variable he wishes to be
+    filled with all the values.
+    3. need to find how to acces all the elements in slots
+    and fetch data from them + add this bind 
+    (actualy i have to do this first and then second.)
+    4. clear all this mess
+@param
+    id = string
+    title = string
+    position = string (center is default for now) {
+        'top'
+        'bototm'
+        'left'
+        'right'
+    }
+    size = object {
+        width 	= string | int
+        height 	= string | int
+    }
+    style = object (pure css) {
+
+    }
+
+@actions - what is has to do when opend 
+    (done)
+    onOpen 	= function
+    onClose = function
+
+
+
+@todos
+    1. figure out hwo to add buttons to the dialog
+        save
+        cancel
+        ...
+    2. figure out how to fetch & insert data in dialog inputs/selector
