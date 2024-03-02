@@ -1,6 +1,8 @@
 <script>
-    import { onMount } from 'svelte';
 	import './Dialog.css';
+	import Draggable from './Draggable.svelte';
+
+    import { onMount } from 'svelte';
  	export let prop;
 	
 	export let dialog;
@@ -59,14 +61,15 @@
 
 {#if toggle}
 <div class="lucidBackground"></div>
-
-<div class="lucidDialog">
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<h1 class="lucidClose" on:click={close}>x</h1>
-	<h1 class="lucidTitle">{prop.title	? prop.title : 'Title'}</h1>
-
-	<div class="lucidContent">
-		<slot></slot>
+<Draggable>
+	<div class="lucidDialog">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<h1 class="lucidClose" on:click={close}>x</h1>
+		<h1 class="lucidTitle">{prop.title	? prop.title : 'Title'}</h1>
+		
+		<div class="lucidContent">
+			<slot></slot>
+		</div>
 	</div>
-</div>
+</Draggable>
 {/if}
