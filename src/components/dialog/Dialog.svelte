@@ -1,10 +1,12 @@
 <script>
+    import { onMount } from 'svelte';
 	import './Dialog.css';
  	export let prop;
 	
 	export let dialog;
 	export let openIf;
 	
+	let values = []; // Initialize your variable
 	let toggle = false;
 
 	// this guy is used everywhere
@@ -21,7 +23,8 @@
 		// send functions back to parent
 		...dialog,
 		open,
-		close
+		close,
+		values,
 	};
 
 	
@@ -31,6 +34,26 @@
 			open();
 		}
   	}
+
+
+	onMount(() => {
+		const slotContent = document.querySelector('.lucidContent');
+		if (slotContent) {
+			slotContent.childNodes.forEach( (node, i) => {
+				if (node.nodeName === 'INPUT') {
+					if(!node.id){
+						let id = node.nodeName + `${Math.random().toString(36).substr(2, 9)}`;
+						node.id = id;
+					}
+
+					node.addEventListener('input', (event) => {
+						values[node.id] = event.target.value;
+					});
+				}
+			});
+		}
+
+	});
 </script>
 
 
