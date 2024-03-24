@@ -5,7 +5,7 @@ general plans
 
 openIF={openDialog} (done -> bind:openIF={openBoolean} )
 
-contentValue = fetch everythings value,
+contentValue = fetch everythings value, (done)
     1. add binds to all the inputs and selectors
     2. it should bind it to the object with the same 
     name as elements id, so the user who defiend 
@@ -18,7 +18,7 @@ contentValue = fetch everythings value,
     4. clear all this mess
 @param
     id = string
-    title = string
+    title = string (done)
     position = string (center is default for now) {
         'top'
         'bototm'
@@ -32,6 +32,8 @@ contentValue = fetch everythings value,
     style = object (pure css) {
 
     }
+
+    draggable = boolean
 
 @actions - what is has to do when opend 
     (done)

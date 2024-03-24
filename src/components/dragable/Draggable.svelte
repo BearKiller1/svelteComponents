@@ -1,6 +1,6 @@
 <script>
-	export let left = 100;
-	export let top = 100;
+	export let left = 500;
+	export let top = 200;
 	
 	let moving = false;
 	
