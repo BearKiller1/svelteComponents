@@ -2,8 +2,6 @@
     // CHANGE THIS
 	import Dialog from './Dialog.svelte';
 
-	let inputValue;
-
 	let dialog = {
 		save: saveDialog,
 	
@@ -13,13 +11,9 @@
 	};
 
 	function saveDialog(){
-		alert(inputValue);
-	}
-
-	function fetchData(){
 		console.log(dialog.values);
 	}
-
+    
 </script>
 
 <button on:click={dialog.open}>Open Dialog</button>
@@ -65,7 +59,6 @@
 
 	<div class="buttons">
 		<button on:click={dialog.save}>Save</button>
-		<button on:click={fetchData}>fetch data</button>
 		<button on:click={dialog.close}>Close</button>
 	</div>
 </Dialog>
